@@ -2,8 +2,23 @@
 
 A tool to find good deals on used Tesla Model Y vehicles (2022-2025) with reasonable prices and low mileage.
 
+## Web Interface
+
+**[View the Live Demo](https://tddg.github.io/ai-raft/)**
+
+The web interface provides an easy way to search and filter Tesla Model Y listings directly in your browser.
+
 ## Features
 
+### Web Interface
+- Interactive search with real-time filtering
+- Beautiful dark theme with responsive design
+- Filter by year, price, mileage, and source
+- Sort by deal score, price, mileage, or year
+- Detailed listing view with all specifications
+- Export results to JSON
+
+### CLI Tool
 - Searches multiple used car websites simultaneously
 - Filters by year range (2022-2025)
 - Sorts by price and mileage to find the best deals
