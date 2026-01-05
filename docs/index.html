@@ -22,6 +22,54 @@
             <p class="tagline">Find the best deals on used Tesla Model Y vehicles (2022-2025)</p>
         </header>
 
+        <!-- Location Section -->
+        <section class="location-section">
+            <div class="location-header">
+                <h2>Your Location</h2>
+                <div class="location-status" id="locationStatus">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Location not set</span>
+                </div>
+            </div>
+            <div class="location-controls">
+                <button id="locateBtn" class="locate-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 2v4m0 12v4m10-10h-4M6 12H2"></path>
+                    </svg>
+                    Locate Me
+                </button>
+                <div class="location-divider">or</div>
+                <div class="zip-input-group">
+                    <input type="text" id="zipCode" placeholder="Enter ZIP code" maxlength="5" pattern="[0-9]{5}">
+                    <button id="zipSearchBtn" class="zip-search-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="radius-group">
+                    <label for="searchRadius">Search Radius</label>
+                    <select id="searchRadius">
+                        <option value="25">25 miles</option>
+                        <option value="50">50 miles</option>
+                        <option value="100" selected>100 miles</option>
+                        <option value="250">250 miles</option>
+                        <option value="500">500 miles</option>
+                        <option value="0">Nationwide</option>
+                    </select>
+                </div>
+            </div>
+            <div class="location-info" id="locationInfo" style="display: none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span id="locationText">Searching near...</span>
+            </div>
+        </section>
+
         <!-- Search Filters -->
         <section class="filters-section">
             <h2>Search Filters</h2>
@@ -70,6 +118,7 @@
                     <label for="sortBy">Sort By</label>
                     <select id="sortBy">
                         <option value="score" selected>Best Deal Score</option>
+                        <option value="distance">Distance: Nearest</option>
                         <option value="price-asc">Price: Low to High</option>
                         <option value="price-desc">Price: High to Low</option>
                         <option value="mileage-asc">Mileage: Low to High</option>
